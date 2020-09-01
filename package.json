@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --base-href=/CV2020/dist/CV2020/",
+    "build": "ng build --base-href=/cv2020/dist/cv2020/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
