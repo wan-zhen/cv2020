@@ -9,6 +9,7 @@ import { ArrowBtnComponent } from './arrow-btn/arrow-btn.component';
 import { AbilitiesComponent } from './abilities/abilities.component';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { ContactComponent } from './contact/contact.component';
+import { NavComponent } from './nav/nav.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +17,8 @@ import { ContactComponent } from './contact/contact.component';
     AbountComponent,
     ArrowBtnComponent,
     AbilitiesComponent,
-    ContactComponent
+    ContactComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
