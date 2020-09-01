@@ -1,1 +1,4 @@
-<p>nav works!</p>
+<ul>
+    <li *ngFor="let item of menu;let i=index;" [ngClass]="{'animate__animated animate__jello': i===nowIndex,'bigger':i===nowPage}"
+        (mouseenter)="enter(i)" (mouseout)="out(i)" (click)="toPage(i)">{{item}}</li>
+</ul>
