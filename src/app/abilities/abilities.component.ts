@@ -1,3 +1,4 @@
+import { chartData } from './../@core/model/chart';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,49 +8,46 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AbilitiesComponent implements OnInit {
   options: any;
-  constructor() {}
+  constructor() { }
 
   ngOnInit(): void {
-    const xAxisData = [];
-    const data1 = [];
-    const data2 = [];
-
-    for (let i = 0; i < 100; i++) {
-      xAxisData.push('category' + i);
-      data1.push((Math.sin(i / 5) * (i / 5 - 10) + i / 6) * 5);
-      data2.push((Math.cos(i / 5) * (i / 5 - 10) + i / 6) * 5);
-    }
-
     this.options = {
-      legend: {
-        data: ['bar', 'bar2'],
-        align: 'left',
+      tooltip: {
+        trigger: 'item',
+        triggerOn: 'mousemove'
       },
-      tooltip: {},
-      xAxis: {
-        data: xAxisData,
-        silent: false,
-        splitLine: {
-          show: false,
-        },
-      },
-      yAxis: {},
       series: [
         {
-          name: 'bar',
-          type: 'bar',
-          data: data1,
-          animationDelay: (idx) => idx * 10,
-        },
-        {
-          name: 'bar2',
-          type: 'bar',
-          data: data2,
-          animationDelay: (idx) => idx * 10 + 100,
-        },
-      ],
-      animationEasing: 'elasticOut',
-      animationDelayUpdate: (idx) => idx * 5,
+          type: 'tree',
+
+          data: [chartData],
+
+          top: '1%',
+          left: '5%',
+          bottom: '5%',
+          right: '5%',
+
+          label: {
+            position: 'left',
+            verticalAlign: 'middle',
+            align: 'right',
+            fontSize: 16
+          },
+
+          leaves: {
+            label: {
+              position: 'right',
+              verticalAlign: 'middle',
+              align: 'left'
+            }
+          },
+          initialTreeDepth : 5,
+          expandAndCollapse: true,
+          animationDuration: 550,
+          animationDurationUpdate: 750
+        }
+      ]
     };
+
   }
 }
