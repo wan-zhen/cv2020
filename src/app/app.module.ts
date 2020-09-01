@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StartComponent } from './start/start.component';
 import { AbountComponent } from './abount/abount.component';
+import { ArrowBtnComponent } from './arrow-btn/arrow-btn.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StartComponent,
-    AbountComponent
+    AbountComponent,
+    ArrowBtnComponent
   ],
   imports: [
     BrowserModule,
