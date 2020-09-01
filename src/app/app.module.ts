@@ -8,13 +8,15 @@ import { AbountComponent } from './abount/abount.component';
 import { ArrowBtnComponent } from './arrow-btn/arrow-btn.component';
 import { AbilitiesComponent } from './abilities/abilities.component';
 import { NgxEchartsModule } from 'ngx-echarts';
+import { ContactComponent } from './contact/contact.component';
 @NgModule({
   declarations: [
     AppComponent,
     StartComponent,
     AbountComponent,
     ArrowBtnComponent,
-    AbilitiesComponent
+    AbilitiesComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,
