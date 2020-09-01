@@ -7,7 +7,7 @@ import { StartComponent } from './start/start.component';
 import { AbountComponent } from './abount/abount.component';
 import { ArrowBtnComponent } from './arrow-btn/arrow-btn.component';
 import { AbilitiesComponent } from './abilities/abilities.component';
-
+import { NgxEchartsModule } from 'ngx-echarts';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +18,10 @@ import { AbilitiesComponent } from './abilities/abilities.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts')
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
