@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { StartComponent } from './start/start.component';
 import { AbountComponent } from './abount/abount.component';
 import { ArrowBtnComponent } from './arrow-btn/arrow-btn.component';
+import { AbilitiesComponent } from './abilities/abilities.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StartComponent,
     AbountComponent,
-    ArrowBtnComponent
+    ArrowBtnComponent,
+    AbilitiesComponent
   ],
   imports: [
     BrowserModule,
